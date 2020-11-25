@@ -1,0 +1,36 @@
+<div class="container">
+  <% if @topic.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@topic.errors.count, "error") %> prohibited
+      this article from being saved:
+    </h2>
+    <ul>
+      <% @topic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+  <div class="field">
+    <%= form_with(model:@topic,local: true) do |form| %>
+    Choose one category
+        <%= form.select(:category, {Actualité:"Actualité",
+                                   Loisir:"Loisir",
+                                   Sport:"Sport",
+                                   Mode:"Mode",
+                                   Tourisme:"Tourisme",
+                                   Politique:"Politique",
+                                   Voyage:"Voyage",
+                                   Sexe:"Sexe",
+                                   Cuisine:"Cuisine"})%><br>
+    Topic title :
+        <%= form.text_field :title,:class=>"form-control",:id=>"exampleInputEmail1" %><br>
+    Topic Content :
+        <%= form.text_area :content,:class=>"form-control",:id=>"topic_content" %><br>
+  <div class="actions">
+          <%= form.submit "Post",:class=>"btn btn-primary"%>
+        </div>
+    <% end %>
+</div>
+</div>
