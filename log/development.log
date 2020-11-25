@@ -696,3 +696,218 @@ Processing by TopicsController#show as HTML
 Completed 200 OK in 39ms (Views: 31.3ms | ActiveRecord: 2.6ms | Allocations: 17403)
 
 
+Started GET "/" for ::1 at 2020-11-25 10:41:28 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=0)[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=1)[0m
+  ↳ app/views/topics/index.html.erb:12
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=2)[0m
+  ↳ app/views/topics/index.html.erb:16
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=3)[0m
+  ↳ app/views/topics/index.html.erb:20
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=4)[0m
+  ↳ app/views/topics/index.html.erb:24
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=5)[0m
+  ↳ app/views/topics/index.html.erb:28
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=6)[0m
+  ↳ app/views/topics/index.html.erb:32
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=7)[0m
+  ↳ app/views/topics/index.html.erb:36
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=8)[0m
+  ↳ app/views/topics/index.html.erb:40
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:45
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/topics/index.html.erb:50
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."topic_id" = $1[0m  [["topic_id", 1]]
+  ↳ app/views/topics/index.html.erb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."topic_id" = $1[0m  [["topic_id", 1]]
+  ↳ app/views/topics/index.html.erb:53
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/topics/index.html.erb:50
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."topic_id" = $1[0m  [["topic_id", 2]]
+  ↳ app/views/topics/index.html.erb:52
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."topic_id" = $1[0m  [["topic_id", 2]]
+  ↳ app/views/topics/index.html.erb:53
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/topics/index.html.erb:50
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."topic_id" = $1[0m  [["topic_id", 3]]
+  ↳ app/views/topics/index.html.erb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."topic_id" = $1[0m  [["topic_id", 3]]
+  ↳ app/views/topics/index.html.erb:53
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/topics/index.html.erb:50
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."topic_id" = $1[0m  [["topic_id", 4]]
+  ↳ app/views/topics/index.html.erb:52
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."topic_id" = $1[0m  [["topic_id", 4]]
+  ↳ app/views/topics/index.html.erb:53
+  Rendered topics/index.html.erb within layouts/application (Duration: 93.7ms | Allocations: 36948)
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" LIMIT $1[0m  [["LIMIT", 6]]
+  ↳ app/views/topics/_footer.html.erb:25
+  Rendered topics/_footer.html.erb (Duration: 4.2ms | Allocations: 1018)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 152ms (Views: 121.2ms | ActiveRecord: 19.2ms | Allocations: 62664)
+
+
+Started GET "/" for ::1 at 2020-11-25 10:41:34 +0100
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:1
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=0)[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=1)[0m
+  ↳ app/views/topics/index.html.erb:12
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=2)[0m
+  ↳ app/views/topics/index.html.erb:16
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=3)[0m
+  ↳ app/views/topics/index.html.erb:20
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=4)[0m
+  ↳ app/views/topics/index.html.erb:24
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=5)[0m
+  ↳ app/views/topics/index.html.erb:28
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=6)[0m
+  ↳ app/views/topics/index.html.erb:32
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=7)[0m
+  ↳ app/views/topics/index.html.erb:36
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "topics" WHERE (category=8)[0m
+  ↳ app/views/topics/index.html.erb:40
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  ↳ app/views/topics/index.html.erb:45
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/topics/index.html.erb:50
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."topic_id" = $1[0m  [["topic_id", 1]]
+  ↳ app/views/topics/index.html.erb:52
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."topic_id" = $1[0m  [["topic_id", 1]]
+  ↳ app/views/topics/index.html.erb:53
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/topics/index.html.erb:50
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."topic_id" = $1[0m  [["topic_id", 2]]
+  ↳ app/views/topics/index.html.erb:52
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."topic_id" = $1[0m  [["topic_id", 2]]
+  ↳ app/views/topics/index.html.erb:53
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/topics/index.html.erb:50
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."topic_id" = $1[0m  [["topic_id", 3]]
+  ↳ app/views/topics/index.html.erb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."topic_id" = $1[0m  [["topic_id", 3]]
+  ↳ app/views/topics/index.html.erb:53
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/topics/index.html.erb:50
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."topic_id" = $1[0m  [["topic_id", 4]]
+  ↳ app/views/topics/index.html.erb:52
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."topic_id" = $1[0m  [["topic_id", 4]]
+  ↳ app/views/topics/index.html.erb:53
+  Rendered topics/index.html.erb within layouts/application (Duration: 59.1ms | Allocations: 17615)
+  [1m[36mTopic Load (1.5ms)[0m  [1m[34mSELECT "topics".* FROM "topics" LIMIT $1[0m  [["LIMIT", 6]]
+  ↳ app/views/topics/_footer.html.erb:25
+  Rendered topics/_footer.html.erb (Duration: 5.6ms | Allocations: 838)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 65.3ms | ActiveRecord: 11.8ms | Allocations: 27336)
+
+
+Started GET "/topics/1" for ::1 at 2020-11-25 10:41:39 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/topics_controller.rb:79:in `set_topic'
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."topic_id" = $1 AND "favorites"."topic_id" = $2 LIMIT $3[0m  [["topic_id", 1], ["topic_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/topics_controller.rb:56:in `show'
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/topics/show.html.erb:1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."topic_id" = $1[0m  [["topic_id", 1]]
+  ↳ app/views/topics/show.html.erb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."topic_id" = $1[0m  [["topic_id", 1]]
+  ↳ app/views/topics/show.html.erb:7
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = $1[0m  [["topic_id", 1]]
+  ↳ app/views/comments/_index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  Rendered comments/_index.html.erb (Duration: 23.1ms | Allocations: 9918)
+  Rendered comments/_form.html.erb (Duration: 2.8ms | Allocations: 853)
+  Rendered topics/show.html.erb within layouts/application (Duration: 35.9ms | Allocations: 13923)
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" LIMIT $1[0m  [["LIMIT", 6]]
+  ↳ app/views/topics/_footer.html.erb:25
+  Rendered topics/_footer.html.erb (Duration: 1.9ms | Allocations: 838)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 45.2ms | ActiveRecord: 7.4ms | Allocations: 31496)
+
+
+Started POST "/topics/1/comments" for ::1 at 2020-11-25 10:42:05 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"authenticity_token"=>"v+5WKfoUqGMJrRUVsSY5qebGHZLenFoSA5MD44QiJ/cJi2tSpUBWBnX6xDq+dhO9DGg7RO33d03GlwAhQdawkQ==", "comment"=>{"comment"=>"\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime\n\n"}, "commit"=>"comment", "topic_id"=>"1"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 1270)
+
+
+Started POST "/topics/1/comments" for ::1 at 2020-11-25 10:42:10 +0100
+Processing by CommentsController#create as JS
+  Parameters: {"authenticity_token"=>"v+5WKfoUqGMJrRUVsSY5qebGHZLenFoSA5MD44QiJ/cJi2tSpUBWBnX6xDq+dhO9DGg7RO33d03GlwAhQdawkQ==", "comment"=>{"comment"=>"\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime\n\n"}, "commit"=>"comment", "topic_id"=>"1"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 1157)
+
+
+Started GET "/topics/1" for ::1 at 2020-11-25 10:42:12 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.7ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/topics_controller.rb:79:in `set_topic'
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."topic_id" = $1 AND "favorites"."topic_id" = $2 LIMIT $3[0m  [["topic_id", 1], ["topic_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/topics_controller.rb:56:in `show'
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/topics/show.html.erb:1
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."topic_id" = $1[0m  [["topic_id", 1]]
+  ↳ app/views/topics/show.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."topic_id" = $1[0m  [["topic_id", 1]]
+  ↳ app/views/topics/show.html.erb:7
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = $1[0m  [["topic_id", 1]]
+  ↳ app/views/comments/_index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/comments/_index.html.erb:6
+  Rendered comments/_index.html.erb (Duration: 26.3ms | Allocations: 8617)
+  Rendered comments/_form.html.erb (Duration: 0.9ms | Allocations: 287)
+  Rendered topics/show.html.erb within layouts/application (Duration: 33.8ms | Allocations: 11374)
+  [1m[36mTopic Load (0.8ms)[0m  [1m[34mSELECT "topics".* FROM "topics" LIMIT $1[0m  [["LIMIT", 6]]
+  ↳ app/views/topics/_footer.html.erb:25
+  Rendered topics/_footer.html.erb (Duration: 3.6ms | Allocations: 837)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 45.6ms | ActiveRecord: 4.4ms | Allocations: 22870)
+
+

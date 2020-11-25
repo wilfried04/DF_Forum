@@ -13,7 +13,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'image_processing', '~> 1.2'
-gem 'letter_opener_web' 
+gem 'letter_opener_web'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
@@ -26,6 +26,9 @@ gem 'ckeditor_rails'
 gem 'friendly_id'
 gem 'haml'
 gem 'simple_form'
+gem 'carrierwave', '~> 2.0'
+
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -51,7 +54,6 @@ group :test do
   gem 'factory_bot_rails'
 end
   gem 'letter_opener_web'
-  gem 'carrierwave', '~> 2.0'
   gem 'kaminari'
   gem 'mini_magick'
   gem 'rubocop', require: false
