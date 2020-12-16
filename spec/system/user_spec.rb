@@ -63,7 +63,7 @@ end
         click_button 'Log in'
         expect(page).to have_content 'Signed in successfully.'
       end
-      it 'Test to jump to the new startup path screen when you are not logged in' do
+      it 'Test to jump to the new topics path screen when you are not logged in' do
         visit new_topic_path
         expect(current_path).to eq new_user_session_path
         expect(page).to have_content 'You need to sign in or sign up before continuing.'

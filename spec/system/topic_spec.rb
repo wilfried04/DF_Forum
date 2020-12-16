@@ -32,7 +32,7 @@ RSpec.describe 'topic Management Function', type: :system do
       end
     end
     context 'when user fill wrong field' do
-      it 'can not create startup without name, resume, adresse, sector_of_business, contact' do
+      it 'can not create topic without name, resume, adresse, sector_of_business, contact' do
         visit new_user_session_path
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
