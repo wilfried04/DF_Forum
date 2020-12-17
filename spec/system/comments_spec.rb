@@ -11,16 +11,5 @@ RSpec.describe 'Comments Management Function', type: :system do
     #FactoryBot.create(:topic, user: @user)
   end
 
-  describe 'Comments manage' do
 
-    context 'When user no login ' do
-      it 'can not comment.' do
-        visit root_path
-        click_on 'comment'
-        fill_in 'comment[comment]', with: 'my comment.'
-        click_on 'commit'
-        expect(page).to have_no_content 'my comment.'
-      end
-    end
-  end
 end
