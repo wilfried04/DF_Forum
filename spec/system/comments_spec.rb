@@ -8,7 +8,7 @@ RSpec.describe 'Comments Management Function', type: :system do
   before do
     @user = FactoryBot.create(:user)
     @user2 = FactoryBot.create(:second_user)
-    FactoryBot.create(:topic, user: @user)
+    #FactoryBot.create(:topic, user: @user)
   end
 
   describe 'Comments manage' do

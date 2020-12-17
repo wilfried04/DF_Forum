@@ -44,7 +44,7 @@ RSpec.describe 'topic Management Function', type: :system do
       end
     end
     context 'when user had event' do
-      it 'can  create another startup' do
+      it 'can  create another topic' do
         FactoryBot.create(:topic, user: @user)
         visit new_user_session_path
         fill_in 'user[email]', with: @user.email
